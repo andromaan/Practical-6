@@ -11,14 +11,6 @@ body {
   color: #333;
 }
 
-main {
-  max-width: 600px;
-  margin: 0 auto;
-  background: white;
-  padding: 20px;
-  border-radius: 4px;
-}
-
 h1 {
   margin-bottom: 20px;
   font-size: 24px;
@@ -75,4 +67,4 @@ button[aria-expanded]:focus {
 
 [role="region"] p {
   margin: 0;
-
+}
