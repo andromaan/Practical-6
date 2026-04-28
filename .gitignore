@@ -1,0 +1,41 @@
+# Node modules (якщо буде додано npm пакети)
+node_modules/
+package-lock.json
+
+# IDE та редактори
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ОС файли
+.DS_Store
+Thumbs.db
+.env.local
+
+# Логи
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#報告файли з аудитів
+lighthouse-report.json
+lighthouse-report.html
+*.axe-audit.json
+
+# Тимчасові файли
+*.tmp
+.cache/
+
+# Backup
+*.bak
+*.backup
+
+# Розгортання
+dist/
+build/
+
+# Документація обслуговування (приватна)
+/private/
