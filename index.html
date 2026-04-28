@@ -3,180 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Доступний акордеон - Практична робота 6</title>
+    <title>Акордеон</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main>
-      <h1>Доступний акордеон з ARIA та клавіатурною навігацією</h1>
-      <p>
-        Вмикайте/вимикайте секції за допомогою кнопок. Навігація між
-        заголовками: <kbd>Arrow Up</kbd> / <kbd>Arrow Down</kbd>, перехід до
-        першої/останньої: <kbd>Home</kbd> / <kbd>End</kbd>, табуляція:
-        <kbd>Tab</kbd>.
-      </p>
+      <h1>Акордеон</h1>
 
-      <div class="accordion-container">
-        <!-- Секція 1 -->
+      <div class="accordion">
         <h3>
-          <button
-            id="acc-btn-1"
-            aria-expanded="false"
-            aria-controls="acc-panel-1"
-          >
-            Секція 1: Загальна інформація про доступність
+          <button id="btn-1" aria-expanded="false" aria-controls="panel-1">
+            Перший пункт
           </button>
         </h3>
-        <div id="acc-panel-1" role="region" aria-labelledby="acc-btn-1" hidden>
-          <p>
-            Доступність в веб-розробці — це практика проєктування вебсайтів,
-            додатків та інструментів, щоб люди з інвалідністю могли їх
-            використовувати. Приблизно 15% населення світу має деяку форму
-            інвалідності, включаючи вади зору, слуху, рухомості та когнітивні
-            порушення.
-          </p>
-          <p>
-            WCAG 2.2 (Web Content Accessibility Guidelines) — це міжнародний
-            стандарт, який визначає мінімальні рівні доступності контенту. Існує
-            три рівні відповідності: A, AA та AAA, де AA вважається "золотим
-            стандартом" для більшості вебсайтів.
-          </p>
+        <div id="panel-1" role="region" aria-labelledby="btn-1" hidden>
+          <p>Вміст першого розділу.</p>
         </div>
 
-        <!-- Секція 2 -->
         <h3>
-          <button
-            id="acc-btn-2"
-            aria-expanded="false"
-            aria-controls="acc-panel-2"
-          >
-            Секція 2: ARIA атрибути та їх роль
+          <button id="btn-2" aria-expanded="false" aria-controls="panel-2">
+            Другий пункт
           </button>
         </h3>
-        <div id="acc-panel-2" role="region" aria-labelledby="acc-btn-2" hidden>
-          <p>
-            ARIA (Accessible Rich Internet Applications) — це набір атрибутів,
-            які передають дополнительну семантичну інформацію допоміжним
-            технологіям, таким як екранні диктори.
-          </p>
-          <ul>
-            <li>
-              <strong>aria-expanded:</strong> Вказує, чи розгорнута секція
-              (true) чи згорнута (false)
-            </li>
-            <li>
-              <strong>aria-controls:</strong> Зв'язує кнопку з панеллю, якою
-              вона керує
-            </li>
-            <li>
-              <strong>aria-labelledby:</strong> Зв'язує панель з її заголовком
-              для синтезу мови
-            </li>
-            <li>
-              <strong>aria-hidden:</strong> Приховує елементи від дерева
-              доступності
-            </li>
-          </ul>
+        <div id="panel-2" role="region" aria-labelledby="btn-2" hidden>
+          <p>Вміст другого розділу.</p>
         </div>
 
-        <!-- Секція 3 -->
         <h3>
-          <button
-            id="acc-btn-3"
-            aria-expanded="false"
-            aria-controls="acc-panel-3"
-          >
-            Секція 3: Клавіатурна навігація та поведінка
+          <button id="btn-3" aria-expanded="false" aria-controls="panel-3">
+            Третій пункт
           </button>
         </h3>
-        <div id="acc-panel-3" role="region" aria-labelledby="acc-btn-3" hidden>
-          <p>
-            Правильна клавіатурна навігація критично важлива для користувачів,
-            які не можуть використовувати мишку. Акордеон повинен підтримувати:
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>Клавіша</th>
-                <th>Дія</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><kbd>Tab</kbd></td>
-                <td>Рухатися до наступної кнопки (стандартна табуляція)</td>
-              </tr>
-              <tr>
-                <td><kbd>Shift + Tab</kbd></td>
-                <td>Рухатися до попередньої кнопки</td>
-              </tr>
-              <tr>
-                <td><kbd>Arrow Down</kbd></td>
-                <td>Фокус на наступну кнопку (циклічно)</td>
-              </tr>
-              <tr>
-                <td><kbd>Arrow Up</kbd></td>
-                <td>Фокус на попередню кнопку (циклічно)</td>
-              </tr>
-              <tr>
-                <td><kbd>Home</kbd></td>
-                <td>Фокус на першу кнопку</td>
-              </tr>
-              <tr>
-                <td><kbd>End</kbd></td>
-                <td>Фокус на останню кнопку</td>
-              </tr>
-              <tr>
-                <td><kbd>Enter / Space</kbd></td>
-                <td>Перемикання стану панелі (вмикання/вимикання)</td>
-              </tr>
-            </tbody>
-          </table>
+        <div id="panel-3" role="region" aria-labelledby="btn-3" hidden>
+          <p>Вміст третього розділу.</p>
         </div>
 
-        <!-- Секція 4 -->
         <h3>
-          <button
-            id="acc-btn-4"
-            aria-expanded="false"
-            aria-controls="acc-panel-4"
-          >
-            Секція 4: Тестування доступності та DevTools
+          <button id="btn-4" aria-expanded="false" aria-controls="panel-4">
+            Четвертий пункт
           </button>
         </h3>
-        <div id="acc-panel-4" role="region" aria-labelledby="acc-btn-4" hidden>
-          <p>
-            Після реалізації акордеона критично важливо перевірити його
-            доступність за допомогою інструментів розробника:
-          </p>
-          <ol>
-            <li>
-              <strong>Chrome DevTools Accessibility Tree:</strong> Відкрийте
-              DevTools (F12), перейдіть на вкладку Elements → Accessibility, щоб
-              побачити дерево доступності та перевірити, як допоміжні технології
-              бачать вашу сторінку.
-            </li>
-            <li>
-              <strong>Keyboard Testing:</strong> Тестуйте лише з клавіатури —
-              переконайтеся, що можна переміщуватися між всіма кнопками та
-              активувати їх без миші.
-            </li>
-            <li>
-              <strong>Screen Reader Testing:</strong> Якщо можливо, протестуйте
-              з екранним дикуром (NVDA, JAWS або вбудованим дикуром ОС), щоб
-              переконатися, що контент озвучується правильно.
-            </li>
-            <li>
-              <strong>Lighthouse Audit:</strong> Запустіть Chrome Lighthouse для
-              отримання автоматичного звіту про доступність, що грунтується на
-              WCAG рекомендаціях.
-            </li>
-            <li>
-              <strong>Axe DevTools:</strong> Встановіть розширення Axe DevTools,
-              щоб отримати детальну перевірку на порушення доступності та
-              рекомендації для розташування.
-            </li>
-          </ol>
+        <div id="panel-4" role="region" aria-labelledby="btn-4" hidden>
+          <p>Вміст четвертого розділу.</p>
         </div>
       </div>
     </main>
